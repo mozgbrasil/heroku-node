@@ -34,10 +34,14 @@
     "type": "git",
     "url": "https://github.com/mozgbrasil/heroku-node"
   },
+  "author": "Marcio dos Santos Amorim",
   "keywords": [
     "node",
-    "heroku",
-    "express"
+    "mozg"
   ],
-  "license": "MIT"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mozgbrasil/heroku-node/issues"
+  },
+  "homepage": "http://mozg.com.br/"
 }
