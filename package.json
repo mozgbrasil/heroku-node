@@ -8,8 +8,8 @@
   },
   "main": "index.js",
   "scripts": {
-    "start": "echo \"EXEC: scripts.start\" && node index.js",
-    "test": "echo \"EXEC: scripts.test\" && node test.js"
+    "start": "node index.js",
+    "test": "node test.js"
   },
   "repository": {
     "type": "git",
