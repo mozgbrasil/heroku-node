@@ -46,6 +46,10 @@ Em seguida você pode fazer um fork desse repositório e fazer as alterações n
 
 Esse aplicativo foi desenvolvido pela [MOZG](http://mozg.com.br/) e se encontra disponível no seguinte repositório no github [https://github.com/mozgbrasil/heroku-node](https://github.com/mozgbrasil/heroku-node), qualquer contribuição é bem vinda.
 
+## Fontes
+
+https://devcenter.heroku.com/articles/getting-started-with-nodejs
+
 # Considerações
 
 Se você gostou deste projeto, considere dar um 🌟 ou doar.
