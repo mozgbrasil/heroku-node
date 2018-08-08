@@ -1,3 +1,5 @@
+const precify = require("./lib/precify");
+
 const express = require('express')
 const path = require('path')
 const PORT = process.env.PORT || 5000
@@ -20,5 +22,11 @@ express()
       res.statusCode = 404;
       res.send('Cant find that file, sorry!');
     });
+  })
+  .get('/try', function(req, res, next){
+      console.log('ss');
+  })
+  .get('/processJson', function(req, res, next){
+      Mozg.Precify.processJson();
   })
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))

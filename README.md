@@ -26,6 +26,17 @@ Como a Heroku trabalha com o [NPM](https://www.npmjs.com/), todas as dependênci
 
 Um aplicativo [Node.js](https://nodejs.org/) usando [Express 4](http://expressjs.com/).
 
+# Executando Localmente
+
+Certifique-se de ter o [Node.js](https://nodejs.org/)
+
+    git clone git@github.com:mozgbrasil/heroku-node.git
+    cd heroku-node
+    npm install
+    npm start
+
+Seu aplicativo agora deve estar em execução em [http://localhost:5000/](http://localhost:5000/)
+
 ## Implantando na Heroku
 
 Clique abaixo para implantar o aplicativo na sua conta na [Heroku](https://www.heroku.com/)
@@ -46,7 +57,7 @@ Em seguida você pode fazer um fork desse repositório e fazer as alterações n
 
 Esse aplicativo foi desenvolvido pela [MOZG](http://mozg.com.br/) e se encontra disponível no seguinte repositório no github [https://github.com/mozgbrasil/heroku-node](https://github.com/mozgbrasil/heroku-node), qualquer contribuição é bem vinda.
 
-## Fontes
+## Documentação
 
 https://devcenter.heroku.com/articles/getting-started-with-nodejs
 
