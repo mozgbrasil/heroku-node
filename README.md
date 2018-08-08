@@ -4,11 +4,7 @@
 [getcomposer]: https://getcomposer.org/
 [uninstall-mods]: https://getcomposer.org/doc/03-cli.md#remove
 
-# Heroku\Node
-
-## Demonstração
-
-[![Clique para visualizar o vídeo](https://img.youtube.com/vi/-cT1mqkdi_E/0.jpg)](https://youtu.be/-cT1mqkdi_E "Clique para visualizar o vídeo")
+# Heroku\Node.js
 
 ## Sinopse
 
@@ -22,9 +18,9 @@ Evangelizar a plataforma [Node.js](https://nodejs.org/)
 
 Para o aplicativo o Heroku usa o arquvo [app.json](app.json)
 
-Para a implantação o Heroku usa o arquvo [composer.json](composer.json)
+Para a implantação o Heroku usa o arquvo [package.json](package.json)
 
-Como a Heroku trabalha com o [Composer](https://getcomposer.org/), todas as dependências a ser usada no projeto está registrada no arquivo [composer.json](composer.json)
+Como a Heroku trabalha com o [NPM](https://www.npmjs.com/), todas as dependências a ser usada no projeto está registrada no arquivo [package.json](package.json)
 
 ## Descrição
 
