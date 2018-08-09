@@ -27,10 +27,13 @@ express()
       console.log('Working...');
       //const Mozg = require('./lib/precify');
       console.log(Mozg);
+      console.log(Mozg.Precify);
+      console.log(Mozg.Precify.construct());
       //console.log(this);
       res.send('Ok');
   })
   .get('/processJson', function(req, res){
+      Mozg.Precify.initialize();
       Mozg.Precify.processJson();
       console.log('Working...');
       res.send('Ok')
