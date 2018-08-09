@@ -1,5 +1,5 @@
 {
-    "name":"mozg-heroku-node",
+    "name":"@mozg/heroku-node",
     "description":"Node.js App",
     "keywords":[
         "app.json",

@@ -1,35 +1,18 @@
 //#!/usr/bin/env node
 
-const program = require('commander');
-const chalk = require('chalk');
-const log = console.log;
-
 const _Mozg = require('./lib/precify');
 const Mozg = _Mozg.Mozg;
 Mozg.Precify.construct();
 
-var isNode = require('detect-node');
+function isHeroku()
+{
+    console.log(process.env.NODE);
+    return process.env.NODE && process.env.NODE.indexOf('heroku') !== -1 ? true : false;
+}
 
-if (isNode) {
+if (isHeroku) {
 
-    console.log("Running under Node.JS");
-
-    program
-      .version('0.1.0')
-      .option('-p, --getJson', 'use getJson')
-      .option('-P, --processJson', 'use processJson')
-      .option('-b, --getPage', 'use getPage')
-      .parse(process.argv);
-
-    log(chalk.bgGreen('-'));
-    if (program.getJson) Mozg.Precify.getJson();
-    if (program.processJson) Mozg.Precify.processJson();
-    if (program.getPage) Mozg.Precify.getPage('SQUID7384');
-    log(chalk.bgGreen('-'));
-
-} else {
-
-    console.log("Running from browser (or whatever not-a-node env)");
+    console.log("Running under Heroku");
 
     const express = require('express')
     const path = require('path')
@@ -76,5 +59,26 @@ if (isNode) {
           res.send('Ok processJson')
       })
       .listen(PORT, () => console.log(`Listening on ${ PORT }`))
+
+} else {
+
+    console.log("Running out Heroku");
+
+    const program = require('commander');
+    const chalk = require('chalk');
+    const log = console.log;
+
+    program
+      .version('0.1.0')
+      .option('-p, --getJson', 'use getJson')
+      .option('-P, --processJson', 'use processJson')
+      .option('-b, --getPage', 'use getPage')
+      .parse(process.argv);
+
+    log(chalk.bgGreen('-'));
+    if (program.getJson) Mozg.Precify.getJson();
+    if (program.processJson) Mozg.Precify.processJson();
+    if (program.getPage) Mozg.Precify.getPage('SQUID7384');
+    log(chalk.bgGreen('-'));
 
 }

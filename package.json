@@ -1,5 +1,5 @@
 {
-  "name": "mozg-heroku-node",
+  "name": "@mozg/heroku-node",
   "version": "0.3.0",
   "description": "Node.js App",
   "engines": {
@@ -12,20 +12,19 @@
     "test": "node test.js"
   },
   "dependencies": {
-    "chalk": "^2.4.1",
-    "cheerio": "^1.0.0-rc.2",
-    "commander": "^2.16.0",
-    "currency.js": "^1.1.4",
-    "detect-node": "^2.0.3",
-    "ejs": "^2.5.6",
-    "express": "^4.15.2",
-    "phantom": "^6.0.3",
-    "random-item": "^1.0.0",
-    "request": "^2.87.0",
-    "sanitize-html": "^1.18.2",
-    "sleep": "^5.2.3",
-    "striptags": "^3.1.1",
-    "underscore": "^1.9.1"
+      "ejs": "^2.5.6",
+      "express": "^4.15.2",
+      "chalk": "^2.4.1",
+      "cheerio": "^1.0.0-rc.2",
+      "commander": "^2.16.0",
+      "currency.js": "^1.1.4",
+      "phantom": "^6.0.3",
+      "random-item": "^1.0.0",
+      "request": "^2.87.0",
+      "sanitize-html": "^1.18.2",
+      "sleep": "^5.2.3",
+      "striptags": "^3.1.1",
+      "underscore": "^1.9.1"
   },
   "devDependencies": {
     "request": "^2.81.0",
