@@ -1,10 +1,8 @@
-const precify = require("./lib/precify");
+const precify = require('./lib/precify');
 
 const express = require('express')
 const path = require('path')
 const PORT = process.env.PORT || 5000
-
-
 
 express()
   .use(express.static(path.join(__dirname, 'public')))
@@ -25,14 +23,15 @@ express()
       res.send('Cant find that file, sorry!');
     });
   })
-  .get('/log', function(req, res, next){
+  .get('/log', function(req, res){
       console.log('Working...');
+      const precify = require('./lib/precify');
       console.log(precify);
       console.log(Mozg);
       console.log(this);
       res.send('Ok');
   })
-  .get('/processJson', function(req, res, next){
+  .get('/processJson', function(req, res){
       Mozg.Precify.processJson();
       console.log('Working...');
       res.send('Ok')
