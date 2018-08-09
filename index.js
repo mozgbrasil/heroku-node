@@ -1,14 +1,24 @@
 //#!/usr/bin/env node
 
+const chalk = require('chalk');
+const log = console.log;
+
 const _Mozg = require('./lib/precify');
 const Mozg = _Mozg.Mozg;
 Mozg.Precify.construct();
 
 function isHeroku()
 {
-    console.log(process.env.NODE);
-    return process.env.NODE && process.env.NODE.indexOf('heroku') !== -1 ? true : false;
+    //console.log(process);
+    console.log(process.env);
+    //console.log(process.env.NODE);
+    //console.log(process.env.NODE_HOME);
+    return process.env.NODE_HOME && process.env.NODE_HOME.indexOf('heroku') !== -1 ? true : false;
 }
+
+var isHeroku = isHeroku();
+
+log(chalk.blue('isHeroku: ') + isHeroku );
 
 if (isHeroku) {
 
@@ -65,8 +75,6 @@ if (isHeroku) {
     console.log("Running out Heroku");
 
     const program = require('commander');
-    const chalk = require('chalk');
-    const log = console.log;
 
     program
       .version('0.1.0')
