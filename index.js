@@ -23,10 +23,13 @@ express()
       res.send('Cant find that file, sorry!');
     });
   })
-  .get('/try', function(req, res, next){
-      console.log('ss');
+  .get('/log', function(req, res, next){
+      console.log('Working...');
+      res.send('Ok')
   })
   .get('/processJson', function(req, res, next){
       Mozg.Precify.processJson();
+      console.log('Working...');
+      res.send('Ok')
   })
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
