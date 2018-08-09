@@ -4,6 +4,8 @@ const express = require('express')
 const path = require('path')
 const PORT = process.env.PORT || 5000
 
+
+
 express()
   .use(express.static(path.join(__dirname, 'public')))
   .set('views', path.join(__dirname, 'views'))
@@ -28,7 +30,7 @@ express()
       console.log(precify);
       console.log(Mozg);
       console.log(this);
-      res.send('Ok').
+      res.send('Ok');
   })
   .get('/processJson', function(req, res, next){
       Mozg.Precify.processJson();
