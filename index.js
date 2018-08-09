@@ -25,7 +25,10 @@ express()
   })
   .get('/log', function(req, res, next){
       console.log('Working...');
-      res.send('Ok')
+      console.log(precify);
+      console.log(Mozg);
+      console.log(this);
+      res.send('Ok').
   })
   .get('/processJson', function(req, res, next){
       Mozg.Precify.processJson();
