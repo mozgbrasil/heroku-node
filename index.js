@@ -1,6 +1,4 @@
-var exports = module.exports = {};
-
-exports.Mozg = require('./lib/precify');
+const Mozg = require('./lib/precify');
 
 const express = require('express')
 const path = require('path')
