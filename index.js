@@ -25,8 +25,7 @@ express()
   })
   .get('/log', function(req, res){
       console.log('Working...');
-      const precify = require('./lib/precify');
-      console.log(precify);
+      //const Mozg = require('./lib/precify');
       console.log(Mozg);
       console.log(this);
       res.send('Ok');
