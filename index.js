@@ -1,9 +1,12 @@
-const _Mozg = require('./lib/precify');
-const Mozg = _Mozg.Mozg;
+//#!/usr/bin/env node
 
 const express = require('express')
 const path = require('path')
 const PORT = process.env.PORT || 5000
+
+const _Mozg = require('./lib/precify');
+const Mozg = _Mozg.Mozg;
+Mozg.Precify.construct();
 
 express()
   .use(express.static(path.join(__dirname, 'public')))
