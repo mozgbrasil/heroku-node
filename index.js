@@ -27,7 +27,7 @@ express()
       console.log('Working...');
       //const Mozg = require('./lib/precify');
       console.log(Mozg);
-      console.log(this);
+      //console.log(this);
       res.send('Ok');
   })
   .get('/processJson', function(req, res){
