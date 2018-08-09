@@ -34,12 +34,18 @@ express()
       console.log(Mozg.Precify);
       console.log(Mozg.Precify.construct());
       //console.log(this);
-      res.send('Ok');
+      res.send('Ok log');
+  })
+  .get('/getJson', function(req, res){
+      Mozg.Precify.initialize();
+      Mozg.Precify.getJson();
+      console.log('Working...');
+      res.send('Ok getJson')
   })
   .get('/processJson', function(req, res){
       Mozg.Precify.initialize();
       Mozg.Precify.processJson();
       console.log('Working...');
-      res.send('Ok')
+      res.send('Ok processJson')
   })
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
