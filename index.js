@@ -9,10 +9,6 @@ Mozg.Precify.construct();
 
 function isHeroku()
 {
-    //console.log(process);
-    console.log(process.env);
-    //console.log(process.env.NODE);
-    //console.log(process.env.NODE_HOME);
     return process.env.NODE_HOME && process.env.NODE_HOME.indexOf('heroku') !== -1 ? true : false;
 }
 
@@ -28,7 +24,14 @@ if (isHeroku) {
     const path = require('path')
     const PORT = process.env.PORT || 5000
 
-    express()
+    const serveIndex = require('serve-index');
+
+    var app = express();
+
+    app.use('/public', serveIndex(path.join(__dirname, 'public')));
+    app.use('/public', express.static(path.join(__dirname, 'public')));
+
+    app
       .use(express.static(path.join(__dirname, 'public')))
       .set('views', path.join(__dirname, 'views'))
       .set('view engine', 'ejs')
