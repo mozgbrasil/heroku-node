@@ -1,4 +1,5 @@
-const Mozg = require('./lib/precify');
+const _Mozg = require('./lib/precify');
+const Mozg = _Mozg.Mozg;
 
 const express = require('express')
 const path = require('path')
